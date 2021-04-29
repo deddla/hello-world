@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   cities: City[];
+  employees: Employee[];
   selectedCities: City[] = [];
+  selectedEmployees: Employee[] = [];
 
   constructor() {
     this.cities = [
@@ -17,10 +19,22 @@ export class AppComponent {
       { name: 'Istanbul', code: 'IST' },
       { name: 'Paris', code: 'PRS' },
     ];
+    this.employees = [
+      { employeeName: 'Srinivasa', employeeId: 'NY' },
+      { employeeName: 'Umesh', employeeId: 'RM' },
+      { employeeName: 'Rajkumar', employeeId: 'LDN' },
+      { employeeName: 'Viswas', employeeId: 'IST' },
+      { employeeName: 'Ved', employeeId: 'PRS' },
+    ];
   }
 }
 
 interface City {
   name: string;
   code: string;
+}
+
+interface Employee {
+  employeeName: string;
+  employeeId: string;
 }

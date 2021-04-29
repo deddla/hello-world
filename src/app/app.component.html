@@ -2,4 +2,12 @@
   [options]="cities"
   [(ngModel)]="selectedCities"
   optionLabel="name"
+  ngDefaultControl
+></app-multi-select>
+
+<app-multi-select
+  [options]="employees"
+  [(ngModel)]="selectedEmployees"
+  optionLabel="employeeName"
+  ngDefaultControl
 ></app-multi-select>

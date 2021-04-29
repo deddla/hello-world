@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MultiSelectComponent implements OnInit {
   @Input('options') options: any[] = [];
+  @Input('optionLabel') optionLabel: string = '';
   selectedOptions: any[] = [];
   ngOnInit(): void {}
 
