@@ -1,0 +1,17 @@
+<div>
+  <p-multiSelect
+    [options]="options"
+    [(ngModel)]="selectedOptions"
+    optionLabel="name"
+    [maxSelectedLabels]="0"
+    [selectedItemsLabel]="''"
+  ></p-multiSelect>
+
+  <p-chip
+    *ngFor="let option of selectedOptions"
+    label="{{ option.name }}"
+    [removable]="true"
+    (click)="onRemoveChip(option)"
+    styleClass="p-mr-2"
+  ></p-chip>
+</div>
